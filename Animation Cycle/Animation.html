@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #b0b2d2;
+    }
+
+    .container {
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      position: relative;
+      height: 500px;
+      width: 800px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .cycle {
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 290px;
+      top: 98px;
+      width: 350px;
+      display: table;
+      margin: auto;
+      z-index: 2;
+      background-image: url(Cycle.png);
+      background-size: cover;
+
+    }
+
+    .div1 {
+      position: absolute;
+      height: 160px;
+      width: 160px;
+      border-radius: 50%;
+      background-image: url(Tyre.png);
+      background-size: cover;
+      top: 55%;
+      left: 59.7%;
+      z-index: 1;
+    }
+
+    .div2 {
+      position: absolute;
+      height: 160px;
+      width: 160px;
+      border-radius: 50%;
+      background-image: url(Tyre.png);
+      background-size: cover;
+      top: 54%;
+      left: 25%;
+      z-index: 1;
+    }
+
+    
+    .t1:hover~.div1  {
+      animation: rotateTranslate1 1s ease-in forwards;
+    }
+
+    .t1:hover~.div2 {
+      animation: rotateTranslate2 1s ease-in forwards;
+    }
+
+    .t1:hover~.cycle {
+      animation: cyclefloat 1.1s linear forwards;
+    }
+
+    .t2:hover~.div1  {
+      animation: rotateTranslate3 1s ease-in forwards;
+    }
+
+    .t2:hover~.div2 {
+      animation: rotateTranslate4 1s ease-in forwards;
+    }
+
+    .t2:hover~.cycle {
+      animation: cyclefloat2 1.1s linear forwards;
+    }
+
+    @keyframes cyclefloat {
+      25% {
+        transform: translateY(-50px) rotate(-3deg);
+      }
+
+      75% {
+        transform: translateY(-50px) rotate(-3deg);
+
+      }
+    }
+
+    @keyframes cyclefloat2 {
+      25% {
+        transform: translateY(-50px) rotate(-3deg);
+      }
+
+      75% {
+        transform: translateY(-50px) rotate(-3deg);
+      }
+    }
+
+    @keyframes rotateTranslate2 {
+      0% {
+        transform: translateX(0px) rotate(0deg);
+        background-image: url(Tyre.png);
+      }
+
+      50% {
+        transform: translateX(-400px) rotate(-360deg);
+        background-image: url(Tyre.png);
+
+      }
+
+      51% {
+        background-image: url(Tyre1.png);
+      }
+
+      100% {
+        transform: translateX(0px) rotate(0deg);
+        background-image: url(Tyre1.png);
+
+      }
+    }
+
+    @keyframes rotateTranslate1 {
+      0% {
+        transform: translateX(0px) rotate(0deg);
+        background-image: url(Tyre.png);
+      }
+
+      50% {
+        transform: translateX(400px) rotate(360deg);
+        background-image: url(Tyre.png);
+
+      }
+
+      51% {
+        background-image: url(Tyre1.png);
+      }
+
+      100% {
+        transform: translateX(0px) rotate(0deg);
+        background-image: url(Tyre1.png);
+
+      }
+    }
+
+    @keyframes rotateTranslate3 {
+      0% {
+        transform: translateX(0px) rotate(0deg);
+        background-image: url(Tyre1.png);
+      }
+
+      50% {
+        transform: translateX(400px) rotate(360deg);
+        background-image: url(Tyre1.png);
+      }
+
+      51% {
+        background-image: url(Tyre2.png);
+      }
+
+      100% {
+        transform: translateX(0px) rotate(0deg);
+        background-image: url(Tyre2.png);
+
+      }
+    }
+
+    @keyframes rotateTranslate4 {
+      0% {
+        transform: translateX(0px) rotate(0deg);
+        background-image: url(Tyre1.png);
+      }
+
+      50% {
+        transform: translateX(-400px) rotate(-360deg);
+        background-image: url(Tyre1.png);
+
+      }
+
+      51% {
+        background-image: url(Tyre2.png);
+      }
+
+      100% {
+        transform: translateX(0px) rotate(0deg);
+        background-image: url(Tyre2.png);
+
+      }
+    }
+
+    .d1 {
+      width: 50%;
+      height: 100%;
+      background-color: rgba(72, 70, 150, 0.8);
+      color: #ffffff;
+    }
+
+    .d2 {
+      width: 50%;
+      height: 100%;
+      background-color: #ffffff;
+    }
+
+    a {
+      position: absolute;
+      padding: 10px 15px;
+      background-color: rgb(197, 50, 50);
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      bottom: 18px;
+      left: 136px;
+    }
+.t{
+  margin-right:15px ;
+}
+    .t1 {
+      position: absolute;
+      right: 0;
+      top:100px;
+      padding: 5px 15px 5px 5px;
+      cursor: pointer;
+      height: 70px;
+      width: 80px;
+    }
+
+    .t2 {
+      position: absolute;
+      right: 0;
+      top:172px;
+      padding: 5px 15px 5px 5px;
+      cursor: pointer;
+      height: 70px;
+      width: 80px;
+    }
+
+  </style>
+</head>
+
+<body>
+    
+        
+        
+      
+  <div class="container">
+    <div class="d1">
+      <h1>IF MODE</h1>
+      <a href="#">Buy Now</a>
+    </div>
+    <div class="d2">
+      <h1>Configure The Bike</h1>
+      <p style="text-align: right; font-weight: 600; margin:0 10px 0 0;;">Choose Tyres</p>
+    </div>
+    <div class="t t1"><img src="Tyre1.png" style="width: 100%; margin: auto;" alt=""></div>
+    <div class="t t2"><img src="Tyre2.png" style="width: 100%; margin: auto;" alt=""></div>
+    <div class="cycle"><span></span></div>
+    <div class="div1"><span></span></div>
+    <div class="div2"><span></span></div>
+  </div>
+
+
+</body>
+
+</html>
